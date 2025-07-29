@@ -1,0 +1,20 @@
+# Ignora arquivos compilados do Java
+*.class
+*.jar
+*.war
+*.ear
+/bin/
+/target/
+/build/
+/out/
+
+# Ignora arquivos de IDE (se usar Eclipse, NetBeans, etc)
+.settings/
+.idea/
+.classpath
+.project
+*.iml
+
+# Ignora arquivos do sistema
+.DS_Store
+Thumbs.db
