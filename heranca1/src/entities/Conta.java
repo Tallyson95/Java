@@ -31,7 +31,7 @@ public class Conta {
         if(valor == null || valor <=0) return false;
 
         if(saldo - valor >= 0.0){
-            this.saldo -= valor;
+            this.saldo -= valor + 5.0;
             return true;
         }
         return false;

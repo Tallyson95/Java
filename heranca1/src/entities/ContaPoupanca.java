@@ -22,4 +22,15 @@ public class ContaPoupanca extends Conta{
     public void autilizarSaldoTaxaJuros(){
         saldo += saldo * taxaJuros;
     }
+
+    @Override
+    public boolean sacar(Double valor){
+        if(valor == null || valor <=0) return false;
+
+        if(saldo - valor >= 0.0){
+            this.saldo -= valor;
+            return true;
+        }
+        return false;
+    }
 }
