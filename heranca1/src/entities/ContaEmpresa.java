@@ -30,4 +30,16 @@ public class ContaEmpresa extends Conta{
         return false;
 
     }
+
+    @Override
+    public final boolean sacar(Double valor){
+        if(valor == null || valor <=0) return false;
+
+        if(saldo - valor >= 0.0){
+            super.sacar(valor);
+            saldo -= 2.0;
+            return true;
+        }
+        return false;
+    }
 }

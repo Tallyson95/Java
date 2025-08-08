@@ -1,6 +1,6 @@
 package entities;
 
-public class ContaPoupanca extends Conta{
+public /*final*/ class ContaPoupanca extends Conta{
     private Double taxaJuros;
     public ContaPoupanca(){
         super();
@@ -24,7 +24,7 @@ public class ContaPoupanca extends Conta{
     }
 
     @Override
-    public boolean sacar(Double valor){
+    public final boolean sacar(Double valor){
         if(valor == null || valor <=0) return false;
 
         if(saldo - valor >= 0.0){
