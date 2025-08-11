@@ -23,26 +23,22 @@ public class Program {
             System.out.println("É terceirizado?: (Y/N)");
             String opt = sc.nextLine().toUpperCase();
 
-            String name;
-            int hours;
-            double valuePerHour;
-            double add;
+            System.out.println("Nome:");
+            String name = sc.nextLine();
+
+            System.out.println("Horas:");
+            int hours = sc.nextInt();
+
+            sc.nextLine();
+
+            System.out.println("Valor da hora:");
+            double valuePerHour = sc.nextDouble();
+
+            sc.nextLine();
+
             if(opt.equals("Y")){
-                System.out.println("Nome:");
-                name = sc.nextLine();
-
-                System.out.println("Horas:");
-                hours = sc.nextInt();
-
-                sc.nextLine();
-
-                System.out.println("Valor da hora:");
-                valuePerHour = sc.nextDouble();
-
-                sc.nextLine();
-
                 System.out.println("Valor do adicional:");
-                add = sc.nextDouble();
+                double add = sc.nextDouble();
                 sc.nextLine();
 
                 Employee outSourceEmployee = new OutSourceEmployee(
@@ -53,15 +49,6 @@ public class Program {
                 );
                 employees.add(outSourceEmployee);
             }else{
-                System.out.println("Nome:");
-                name = sc.nextLine();
-                System.out.println("Horas:");
-                hours = sc.nextInt();
-                sc.nextLine();
-                System.out.println("Valor da hora:");
-                valuePerHour = sc.nextDouble();
-                sc.nextLine();
-
                 Employee employee = new Employee(
                         name,
                         hours,
