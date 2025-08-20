@@ -67,6 +67,14 @@ public class Program {
 
                     boolean comentou = false;
                     comentou = comentarPost(postagens, idPost, sc, comentou);
+                    if (comentou){
+                        System.out.println("Gostaria de dar like?: [ S ] - [ N ]");
+                        String respLike = sc.nextLine().toUpperCase();
+                        if(respLike.equals("S")){
+                            System.out.println(like(postagens, idPost));
+                        }
+
+                    }
 
                     if(!comentou){
                         System.out.println("Post não encontrado!");
@@ -114,6 +122,16 @@ public class Program {
             }
         }
         return comentou;
+    }
+
+    public static String like(List<Post> postagens, int idPost){
+        for (Post post : postagens) {
+            if (post.getId() == idPost) {
+                post.darLike();
+                 return "Like dado com sucesso";
+            }
+        }
+        return "Não foi possivel dar like";
     }
 
     public static void removerPost(List<Post> postagens, Scanner sc){

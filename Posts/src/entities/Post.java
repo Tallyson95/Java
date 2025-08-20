@@ -55,9 +55,6 @@ public class Post {
         return likes;
     }
 
-    public void setLikes(Integer likes) {
-        this.likes = likes;
-    }
 
     public List<Comentario> getComentarios() {
         return comentarios;
@@ -68,6 +65,9 @@ public class Post {
         comentarios.add(comentario);
     }
 
+    public void darLike(){
+        this.likes += 1;
+    }
     public void removerComentario(Comentario comentario){
         comentarios.remove(comentario);
     }
