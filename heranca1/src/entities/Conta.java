@@ -1,6 +1,6 @@
 package entities;
 
-public class Conta {
+public abstract class Conta {
     private Integer numero;
     private String titular;
     private static Double saldoInicial = 0.0;
