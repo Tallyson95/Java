@@ -56,7 +56,7 @@ public class PostService {
             comentario.setPost(post);
             comentario.setData(new Date());
             comentarioRepository.save(comentario);
-            // Atualiza a lista de comentários do post
+            
             post = postRepository.findById(postId).get();
             return PostResponseDTO.fromEntity(post);
         }

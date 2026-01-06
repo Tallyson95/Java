@@ -30,7 +30,6 @@ public class Post {
         this.likes = likes;
     }
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }

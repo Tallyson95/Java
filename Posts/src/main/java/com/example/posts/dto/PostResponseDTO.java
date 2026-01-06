@@ -41,7 +41,6 @@ public class PostResponseDTO {
                 comentarios);
     }
 
-    // Getters e setters
 
     public Long getId() {
         return id;
@@ -91,7 +90,6 @@ public class PostResponseDTO {
         this.comentarios = comentarios;
     }
 
-    // DTO interno para comentário
     public static class ComentarioDTO {
         private Long id;
         private String nome;
@@ -107,7 +105,6 @@ public class PostResponseDTO {
             return dto;
         }
 
-        // Getters e setters
         public Long getId() {
             return id;
         }
